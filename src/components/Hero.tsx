@@ -1,8 +1,12 @@
-
+import Footer from './Footer'
 
 function Hero() {
   return (
-    <div>Hero</div>
+    <>
+       <div>Hero</div>
+       <Footer />
+    </>
+   
   )
 }
 
