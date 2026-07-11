@@ -11,33 +11,42 @@ type NavLink = {
 
 const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "Who We Are", href: "#who-we-are" },
-  { label: "Our Model", href: "#our-model" },
+  { label: "Who We Are", href: "/who-we-are" },
+  { label: "Our Model", href: "/our-model" },
   {
     label: "Our Services",
-    href: "#our-services",
+    href: "#",
     children: [
-      { label: "Training", href: "#training" },
-      { label: "Consultancy", href: "#consultancy" },
+      { label: "Training", href: "/training" },
+      { label: "Consultancy", href: "/consultancy" },
     ],
   },
   {
     label: "Community Impact",
-    href: "#community-impact",
+    href: "#",
     children: [
-      { label: "Sexual Health and Reproductive Rights", href: "#sexual-health-reproductive-rights" },
-      { label: "Children's Online Safety", href: "#childrens-online-safety" },
-      { label: "Leadership and Governance", href: "#leadership-governance" },
-      { label: "Climate Change Action", href: "#climate-change-action" },
+      { label: "Sexual Health and Reproductive Rights", href: "/sexual-health-reproductive-rights" },
+      { label: "Children's Online Safety", href: "/childrens-online-safety" },
+      { label: "Leadership and Governance", href: "/leadership-governance" },
+      { label: "Climate Change Action", href: "/climate-change-action" },
     ],
   },
-  { label: "Contact Us", href: "#contact-us" },
+  { label: "Contact Us", href: "/contact-us" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [mobileSubOpen, setMobileSubOpen] = useState<string | null>(null);
   const [desktopSubOpen, setDesktopSubOpen] = useState<string | null>(null);
+
+  const getNavTarget = (href: string) =>
+    href.startsWith("#") ? { pathname: "/", hash: href } : href;
+
+  const closeMenu = () => {
+    setOpen(false);
+    setMobileSubOpen(null);
+    setDesktopSubOpen(null);
+  };
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 font-[Manrope,sans-serif]">
@@ -86,7 +95,8 @@ export default function Navbar() {
               onMouseLeave={() => link.children && setDesktopSubOpen(null)}
             >
               <Link
-                to={link.href}
+                to={getNavTarget(link.href)}
+                onClick={closeMenu}
                 className="flex items-center gap-1 text-[13px] font-semibold uppercase tracking-wide text-[#F3F6F1] transition-colors hover:text-[#F2801E]"
                 aria-haspopup={link.children ? "true" : undefined}
                 aria-expanded={link.children ? desktopSubOpen === link.label : undefined}
@@ -116,7 +126,8 @@ export default function Navbar() {
                         className="border-b border-white/25 last:border-none"
                       >
                         <Link
-                          to={child.href}
+                          to={getNavTarget(child.href)}
+                          onClick={closeMenu}
                           className="block px-5 py-3 text-[13px] font-semibold text-white transition-colors hover:bg-[#0B2A1B]/10"
                         >
                           {child.label}
@@ -161,8 +172,8 @@ export default function Navbar() {
               <li key={link.label} className="border-b border-white/5 py-2 last:border-none">
                 <div className="flex items-center justify-between">
                   <Link
-                    to={link.href}
-                    onClick={() => !link.children && setOpen(false)}
+                    to={getNavTarget(link.href)}
+                    onClick={() => !link.children && closeMenu()}
                     className="text-sm font-semibold uppercase tracking-wide text-[#F3F6F1] hover:text-[#F2801E]"
                   >
                     {link.label}
@@ -189,8 +200,8 @@ export default function Navbar() {
                     {link.children.map((child) => (
                       <li key={child.label} className="border-b border-white/25 last:border-none">
                         <Link
-                          to={child.href}
-                          onClick={() => setOpen(false)}
+                          to={getNavTarget(child.href)}
+                          onClick={closeMenu}
                           className="block px-4 py-3 text-[13px] font-semibold text-white"
                         >
                           {child.label}
