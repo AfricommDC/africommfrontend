@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { ChevronLeft, ChevronRight, ArrowRight, Check } from "lucide-react";
+import Footer from './Footer';
+
 
 
 /* ------------------------------------------------------------------ */
@@ -288,6 +290,7 @@ export default function Hero() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
