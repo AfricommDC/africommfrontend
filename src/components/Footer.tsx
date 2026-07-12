@@ -1,209 +1,196 @@
-import { Mail, MapPin, Phone, Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { FaFacebook } from "react-icons/fa";
 
-type QuickLink = {
-  label: string;
-  href: string;
-};
+/* ------------------------------------------------------------------ */
+/*  Logo emblem                                                        */
+/* ------------------------------------------------------------------ */
 
-type LinkSection = {
-  title: string;
-  links: QuickLink[];
-};
+function EmblemMark({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 200 200"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      {/* Laurel wreath - left */}
+      <g stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none">
+        <path d="M60 165c-28-8-46-34-46-64 0-26 13-49 33-62" />
+        {[...Array(9)].map((_, i) => {
+          const t = i / 8;
+          const angle = Math.PI * (0.28 + t * 0.62);
+          const cx = 100 - Math.cos(angle) * 62;
+          const cy = 100 + Math.sin(angle) * 68 - 4;
+          return (
+            <ellipse
+              key={`l-${i}`}
+              cx={cx}
+              cy={cy}
+              rx="10"
+              ry="5"
+              transform={`rotate(${(angle * 180) / Math.PI - 90} ${cx} ${cy})`}
+              fill="white"
+              stroke="none"
+            />
+          );
+        })}
+      </g>
+
+      {/* Laurel wreath - right */}
+      <g stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none">
+        <path d="M140 165c28-8 46-34 46-64 0-26-13-49-33-62" />
+        {[...Array(9)].map((_, i) => {
+          const t = i / 8;
+          const angle = Math.PI * (0.28 + t * 0.62);
+          const cx = 100 + Math.cos(angle) * 62;
+          const cy = 100 + Math.sin(angle) * 68 - 4;
+          return (
+            <ellipse
+              key={`r-${i}`}
+              cx={cx}
+              cy={cy}
+              rx="10"
+              ry="5"
+              transform={`rotate(${-((angle * 180) / Math.PI - 90)} ${cx} ${cy})`}
+              fill="white"
+              stroke="none"
+            />
+          );
+        })}
+      </g>
+
+      {/* People - three simple linked figures */}
+      <g fill="white">
+        <circle cx="100" cy="98" r="10" />
+        <path d="M84 150c0-14 7-24 16-24s16 10 16 24z" />
+        <circle cx="72" cy="112" r="7.5" />
+        <path d="M60 150c0-11 5.5-19 12-19s12 8 12 19z" opacity="0.95" />
+        <circle cx="128" cy="112" r="7.5" />
+        <path d="M116 150c0-11 5.5-19 12-19s12 8 12 19z" opacity="0.95" />
+      </g>
+
+      {/* Graduation cap */}
+      <g fill="white">
+        <path d="M100 46l52 19-52 19-52-19z" />
+        <path d="M78 74v18c0 6 10 12 22 12s22-6 22-12V74l-22 8z" />
+        <path d="M150 65v20c0 2.2-1.8 4-4 4s-4-1.8-4-4V65z" />
+      </g>
+    </svg>
+  );
+}
+
+function WhatsAppIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M17.47 14.38c-.29-.15-1.7-.84-1.97-.93-.26-.1-.46-.15-.65.15-.19.29-.75.93-.92 1.12-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.6-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.57-.9-2.15-.24-.57-.48-.5-.65-.5-.17-.01-.36-.01-.56-.01s-.51.07-.78.36c-.26.29-1.02 1-1.02 2.43s1.04 2.82 1.19 3.01c.15.19 2.05 3.13 4.96 4.39.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.55-.08 1.7-.7 1.94-1.37.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z" />
+      <path d="M12.02 2C6.5 2 2.02 6.48 2.02 12c0 1.85.5 3.58 1.36 5.07L2 22l5.08-1.33A9.96 9.96 0 0 0 12.02 22C17.54 22 22 17.52 22 12S17.54 2 12.02 2zm0 18.2a8.17 8.17 0 0 1-4.17-1.14l-.3-.18-3.02.79.81-2.95-.2-.31A8.18 8.18 0 1 1 20.2 12a8.19 8.19 0 0 1-8.18 8.2z" />
+    </svg>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Footer data                                                        */
+/* ------------------------------------------------------------------ */
+
+const QUICK_LINKS = ["About Us", "Our Programs", "Our Services", "Our Model"];
+const SUPPORT_LINKS = ["Donate", "Work with Us", "Volunteer", "Partner in a program"];
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-
-  const QUICK_LINKS: LinkSection[] = [
-    {
-      title: "Quick Links",
-      links: [
-        { label: "Home", href: "/" },
-        { label: "Who We Are", href: "/who-we-are" },
-        { label: "Our Model", href: "/our-model" },
-        { label: "Contact Us", href: "/contact-us" },
-      ],
-    },
-    {
-      title: "Our Services",
-      links: [
-        { label: "Training", href: "/training" },
-        { label: "Consultancy", href: "/consultancy" },
-      ],
-    },
-    {
-      title: "Community Impact",
-      links: [
-        { label: "Sexual Health & Reproductive Rights", href: "/sexual-health-reproductive-rights" },
-        { label: "Children's Online Safety", href: "/childrens-online-safety" },
-        { label: "Leadership & Governance", href: "/leadership-governance" },
-        { label: "Climate Change Action", href: "/climate-change-action" },
-      ],
-    },
-  ];
-
-  const SOCIAL_LINKS = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-  ];
-
-  const CONTACT_INFO = [
-    {
-      icon: Phone,
-      text: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
-    },
-    {
-      icon: Mail,
-      text: "info@africomm.org",
-      href: "mailto:info@africomm.org",
-    },
-    {
-      icon: MapPin,
-      text: "123 Main Street, Nairobi, Kenya",
-      href: "#",
-    },
-  ];
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail("");
-      setTimeout(() => setSubscribed(false), 3000);
-    }
-  };
-
-  const LEGAL_LINKS = [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" },
-    { label: "Cookie Policy", href: "/cookies" },
-  ];
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-gray-100">
-      {/* Main Footer Content */}
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        {/* Top Section: Company Info & Links */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          {/* Column 1: Company Info */}
-          <div className="space-y-4">
-            <div>
-              <h3 className="text-2xl font-bold text-white">Africomm</h3>
-              <p className="mt-2 text-sm text-gray-400">
-                Empowering African communities through digital innovation and sustainable development.
+    <footer className="bg-[#009933] px-6 py-14 text-white sm:px-10 lg:px-16">
+      <div className="mx-auto flex max-w-[1400px] flex-col gap-12 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
+        {/* Brand block */}
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+          <EmblemMark className="h-28 w-28 sm:h-32 sm:w-32" />
+          <p className="mt-4 font-[Manrope,sans-serif] text-lg font-extrabold tracking-wide">
+            AFRICOMM DEVELOPMENT CENTRE
+          </p>
+          <p className="text-sm text-white/85">Inspirational Transformation</p>
+        </div>
+
+        {/* Link columns */}
+        <div className="grid grid-cols-1 gap-10 text-center sm:grid-cols-3 sm:text-left lg:flex lg:flex-1 lg:justify-end lg:gap-16">
+          {/* Contact us */}
+          <div className="flex flex-col items-center sm:items-start">
+            <h3 className="font-[Manrope,sans-serif] text-sm font-bold tracking-wide">
+              CONTACT US
+            </h3>
+            <div className="mt-4 space-y-1 text-sm leading-relaxed text-white/90">
+              <p>Email: africommdc@gmail.com</p>
+              <p>Mobile: +254 723 507 577 | +254 714 477 743</p>
+              <p>
+                Location: Chuka Town, Abdenego House, Room 1, next to Chuka
+                Boys High School, along Kaanwa-Kajuki Road.
               </p>
             </div>
 
-            {/* Contact Info */}
-            <div className="space-y-2">
-              {CONTACT_INFO.map((info) => {
-                const Icon = info.icon;
-                return (
-                  <a
-                    key={info.text}
-                    href={info.href}
-                    className="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors"
-                  >
-                    <Icon size={18} />
-                    <span>{info.text}</span>
-                  </a>
-                );
-              })}
-            </div>
-
-            {/* Social Links */}
-            <div className="flex gap-4 pt-4">
-              {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
+            <p className="mt-6 flex items-center gap-3 text-sm font-medium">
+              Connect with Us:
+              <span className="flex items-center gap-2">
                 <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="inline-flex items-center justify-center rounded-full bg-gray-800 p-2 text-gray-400 hover:bg-blue-600 hover:text-white transition-all"
+                  href="#"
+                  aria-label="Facebook"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#009933] transition-transform hover:scale-105"
                 >
-                  <Icon size={18} />
+                  <FaFacebook className="h-4 w-4" />
                 </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Columns 2-4: Link Sections */}
-          {QUICK_LINKS.map((section) => (
-            <div key={section.title}>
-              <h4 className="text-sm font-semibold uppercase text-white">
-                {section.title}
-              </h4>
-              <ul className="mt-4 space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      to={link.href}
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* Divider */}
-        <div className="my-12 border-t border-gray-800" />
-
-        {/* Newsletter Section */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div>
-            <h4 className="text-lg font-semibold text-white">
-              Stay Updated
-            </h4>
-            <p className="mt-2 text-sm text-gray-400">
-              Subscribe to our newsletter for the latest news and updates.
+                <a
+                  href="#"
+                  aria-label="WhatsApp"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#009933] transition-transform hover:scale-105"
+                >
+                  <WhatsAppIcon className="h-4 w-4" />
+                </a>
+              </span>
             </p>
           </div>
 
-          <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="flex-1 rounded-lg bg-gray-800 px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
-            />
-            <Button
-              type="submit"
-              className="bg-blue-600 hover:bg-blue-700 text-white"
-            >
-              {subscribed ? "✓ Subscribed" : "Subscribe"}
-            </Button>
-          </form>
+          {/* Quick links */}
+          <div className="flex flex-col items-center sm:items-start">
+            <h3 className="font-[Manrope,sans-serif] text-sm font-bold tracking-wide">
+              QUICK LINKS
+            </h3>
+            <ul className="mt-4 space-y-2 text-sm text-white/90">
+              {QUICK_LINKS.map((link) => (
+                <li key={link}>
+                  <a href="#" className="transition-colors hover:text-white">
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Support us */}
+          <div className="flex flex-col items-center sm:items-start">
+            <h3 className="font-[Manrope,sans-serif] text-sm font-bold tracking-wide">
+              SUPPORT US
+            </h3>
+            <ul className="mt-4 space-y-2 text-sm text-white/90">
+              {SUPPORT_LINKS.map((link) => (
+                <li key={link}>
+                  <a href="#" className="transition-colors hover:text-white">
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+      </div>
 
-        {/* Divider */}
-        <div className="my-8 border-t border-gray-800" />
-
-        {/* Bottom: Copyright & Legal Links */}
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Africomm. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            {LEGAL_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className="text-sm text-gray-400 hover:text-white transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+      {/* Divider + bottom bar */}
+      <div className="mx-auto mt-12 max-w-[1400px] border-t border-white/30 pt-6">
+        <div className="flex flex-col items-center gap-3 text-sm text-white/85 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {year} Africomm Development Centre</p>
+          <div className="flex items-center gap-6">
+            <a href="#" className="transition-colors hover:text-white">
+              Privacy Policy
+            </a>
+            <a href="#" className="transition-colors hover:text-white">
+              Accessibility Statement
+            </a>
           </div>
         </div>
       </div>
