@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { ChevronLeft, ChevronRight, ArrowRight, Check } from "lucide-react";
+import image1 from "@/assets/Africomm/image 26.png";
+import image2 from "@/assets/Africomm/image 32.png";
+import image3 from "@/assets/Africomm/image 31.png";
 import Footer from './Footer';
 
 
@@ -12,24 +15,19 @@ import Footer from './Footer';
 
 const SLIDES = [
   {
-    src: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&h=1000&fit=crop",
-    alt: "A community member smiling among the trees",
+    src: image1,
+    alt: "first image",
     position: "object-[26%_42%]",
   },
   {
-    src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1600&h=1000&fit=crop",
-    alt: "Community members working together in the field",
+    src: image2,
+    alt: "second image",
     position: "object-[50%_40%]",
   },
   {
-    src: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&h=1000&fit=crop",
-    alt: "Children in a rural community smiling",
+    src: image3,
+    alt: "third image",
     position: "object-[50%_35%]",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1600&h=1000&fit=crop",
-    alt: "Farmers tending to crops together",
-    position: "object-[50%_45%]",
   },
 ];
 
