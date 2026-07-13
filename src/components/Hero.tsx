@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, ArrowRight, Check } from "lucide-react";
 import image1 from "@/assets/Africomm/image 26.png";
 import image2 from "@/assets/Africomm/image 32.png";
 import image3 from "@/assets/Africomm/image 31.png";
+import AfricommSections from "./ImpactSections";
 import Footer from './Footer';
 
 
@@ -288,6 +289,7 @@ export default function Hero() {
           </div>
         </div>
       </section>
+      <AfricommSections />
       <Footer />
     </>
   );
