@@ -5,6 +5,7 @@ import image1 from "@/assets/Africomm/image 26.png";
 import image2 from "@/assets/Africomm/image 32.png";
 import image3 from "@/assets/Africomm/image 31.png";
 import AfricommSections from "./ImpactSections";
+import Patnership from "./Patnership";
 import Footer from './Footer';
 
 
@@ -290,6 +291,7 @@ export default function Hero() {
         </div>
       </section>
       <AfricommSections />
+      <Patnership />
       <Footer />
     </>
   );
