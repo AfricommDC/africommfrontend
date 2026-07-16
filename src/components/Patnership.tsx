@@ -10,6 +10,8 @@ import image8 from "@/assets/Africomm/image 20.png";
 import GetInvolved from "@/components/GetInvolved";
 
 
+
+
 interface LogoEntry {
   name: string;
   logo: string;
