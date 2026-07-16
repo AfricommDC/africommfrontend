@@ -3,6 +3,31 @@ import image1 from "@/assets/Africomm/image 2.png";
 import image2 from "@/assets/Africomm/image 3.png";
 import GetInvolved from "@/components/GetInvolved";
 import Footer from "@/components/Footer";
+import {
+  Scale,
+  Users,
+  HeartHandshake,
+  BadgeHelp,
+} from "lucide-react";
+
+const values = [
+  {
+    title: "Integrity",
+    icon: Scale,
+  },
+  {
+    title: "Team spirit",
+    icon: Users,
+  },
+  {
+    title: "Respect and openness",
+    icon: HeartHandshake,
+  },
+  {
+    title: "Diversity and inclusivity",
+    icon: BadgeHelp,
+  },
+];
 
 export default function WhoWeAre() {
   const heroImage =
@@ -13,6 +38,7 @@ export default function WhoWeAre() {
   return (
 
     <>
+
         <main className="w-full">
         {/* Section 1: Hero */}
         <section className="relative h-[520px] w-full overflow-hidden md:h-[600px]">
@@ -115,6 +141,49 @@ export default function WhoWeAre() {
             </div>
         </section>
         </main>
+
+        <section className="bg-white py-16">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+                {/* Left Content */}
+                <div>
+                    <h2 className="mb-6 text-4xl font-bold text-gray-900">
+                    Our Core Values
+                    </h2>
+
+                    <p className="mb-8 text-gray-700 leading-8">
+                    We are committed to teamwork, partnership, inclusivity,
+                    transparency, and genuine participation as the foundation of all
+                    our programmes and engagements. These principles define not only
+                    what we do, but also how and why we do it.
+                    </p>
+
+                    <p className="text-gray-700 leading-8">
+                    At Africomm Development Centre, we believe sustainable
+                    development is only possible when communities are fully engaged,
+                    empowered, and supported to lead their own transformation.
+                    </p>
+                </div>
+
+                {/* Right Cards */}
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    {values.map(({ title, icon: Icon }) => (
+                    <div
+                        key={title}
+                        className="flex min-h-[170px] flex-col items-center justify-center border border-gray-300 bg-white p-6 transition hover:border-green-600 hover:shadow-md"
+                    >
+                        <Icon className="mb-5 h-12 w-12 text-green-600" />
+
+                        <h3 className="text-center text-sm font-medium text-gray-800">
+                        {title}
+                        </h3>
+                    </div>
+                    ))}
+                </div>
+                </div>
+            </div>
+        </section>
+
 
         <GetInvolved />
         <Footer />
