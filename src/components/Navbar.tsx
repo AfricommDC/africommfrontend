@@ -149,10 +149,12 @@ export default function Navbar() {
           >
             
             <Link to="/contact-us" > Hire Us</Link>
-            
+
           </Button>
           <Button className="h-9 rounded-[6px] bg-[#F2801E] px-5 text-[12px] font-bold uppercase tracking-wide text-[#0B2A1B] hover:bg-[#FFA552]">
-            Donate
+            
+            <Link to="/donations" >Donate</Link>
+            
           </Button>
         </div>
 
@@ -224,7 +226,7 @@ export default function Navbar() {
               
             </Button>
             <Button className="flex-1 rounded-[6px] bg-[#F2801E] font-bold text-[#0B2A1B] hover:bg-[#FFA552]">
-              Donate
+              <Link to="/donations" >Donate</Link>
             </Button>
           </div>
         </div>
