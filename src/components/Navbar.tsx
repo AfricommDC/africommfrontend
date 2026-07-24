@@ -147,7 +147,9 @@ export default function Navbar() {
             variant="outline"
             className="h-9 rounded-[6px] border-[#F8F4EA]/70 bg-transparent px-5 text-[12px] font-bold uppercase tracking-wide text-[#F8F4EA] hover:bg-[#F8F4EA]/10 hover:text-[#F8F4EA]"
           >
-            Hire Us
+            
+            <Link to="/contact-us" > Hire Us</Link>
+            
           </Button>
           <Button className="h-9 rounded-[6px] bg-[#F2801E] px-5 text-[12px] font-bold uppercase tracking-wide text-[#0B2A1B] hover:bg-[#FFA552]">
             Donate
@@ -218,7 +220,8 @@ export default function Navbar() {
               variant="outline"
               className="flex-1 rounded-[6px] border-[#F8F4EA]/70 bg-transparent text-[#F8F4EA]"
             >
-              Hire Us
+              <Link to="/contact-us" > Hire Us</Link>
+              
             </Button>
             <Button className="flex-1 rounded-[6px] bg-[#F2801E] font-bold text-[#0B2A1B] hover:bg-[#FFA552]">
               Donate
