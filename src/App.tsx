@@ -4,7 +4,7 @@ import Whoweare from './components/Navigation/Whoweare';
 import OurModel from './components/Navigation/OurModel';
 import ContactUs from './components/Navigation/ContactUs';
 import Volunteer from './components/Footerheadline/Volunteer';
-
+import Donations from './components/Navigation/Donations';
 
 
 
@@ -18,6 +18,7 @@ function App() {
         <Route path="/our-model" element={<OurModel />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/volunteer" element={<Volunteer />} />
+        <Route path="/donations" element={<Donations />} />
       </Routes>
     </>
   )
