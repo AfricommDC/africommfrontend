@@ -57,8 +57,6 @@ export default function Navbar() {
           <span className="text-white">|</span>
           <span>+254 723 507 577</span>
           <span className="text-white">|</span>
-          <span>+254 714 477 743</span>
-          <span className="text-white">|</span>
           <span>Chuka Town, Abdenego House, Room 1</span>
         </div>
       </div>
