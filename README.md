@@ -26,7 +26,7 @@ Make sure you have the following installed on your computer:
 
 1. **Clone the repository**
  ```bash
-   git clone <repository-url>
+   git clone https://github.com/AfricommDC/africommfrontend.git
  ```
    then 
 
