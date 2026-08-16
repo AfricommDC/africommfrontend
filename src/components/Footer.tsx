@@ -118,7 +118,7 @@ export default function Footer() {
             </h3>
             <div className="mt-4 space-y-1 text-sm leading-relaxed text-white/90">
               <p>Email: africommdc@gmail.com</p>
-              <p>Mobile: +254 723 507 577 | +254 714 477 743</p>
+              <p>Mobile: +254 723 507 577</p>
               <p>
                 Location: Chuka Town, Abdenego House, Room 1, next to Chuka
                 Boys High School, along Kaanwa-Kajuki Road.
@@ -129,14 +129,18 @@ export default function Footer() {
               Connect with Us:
               <span className="flex items-center gap-2">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/share/1EuM4yuqC8/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Facebook"
                   className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#009933] transition-transform hover:scale-105"
                 >
                   <FaFacebook className="h-4 w-4" />
                 </a>
                 <a
-                  href="#"
+                  href="https://wa.me/254723507577"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="WhatsApp"
                   className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#009933] transition-transform hover:scale-105"
                 >
