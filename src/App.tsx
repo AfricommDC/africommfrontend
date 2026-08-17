@@ -5,6 +5,9 @@ import OurModel from './components/Navigation/OurModel';
 import ContactUs from './components/Navigation/ContactUs';
 import Volunteer from './components/Footerheadline/Volunteer';
 import Donations from './components/Navigation/Donations';
+import SexualHealth from './components/Navigation/CommunityImpact/SexualHealth';
+
+
 
 
 
@@ -19,6 +22,8 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/volunteer" element={<Volunteer />} />
         <Route path="/donations" element={<Donations />} />
+
+        <Route path="/sexual-health-reproductive-rights" element={<SexualHealth />} />
       </Routes>
     </>
   )
