@@ -6,8 +6,7 @@ import ContactUs from './components/Navigation/ContactUs';
 import Volunteer from './components/Footerheadline/Volunteer';
 import Donations from './components/Navigation/Donations';
 import SexualHealth from './components/Navigation/CommunityImpact/SexualHealth';
-
-
+import ChildrenSafety from './components/Navigation/CommunityImpact/ChildrenSafety';
 
 
 
@@ -24,6 +23,7 @@ function App() {
         <Route path="/donations" element={<Donations />} />
 
         <Route path="/sexual-health-reproductive-rights" element={<SexualHealth />} />
+        <Route path="/childrens-online-safety" element={<ChildrenSafety />} />
       </Routes>
     </>
   )
