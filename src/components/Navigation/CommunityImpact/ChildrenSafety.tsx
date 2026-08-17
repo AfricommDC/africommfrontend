@@ -165,6 +165,72 @@ export default function ChildrenSafety() {
           </div>
         </section>
 
+        {/* Programme Goals Section */}
+        <section className="w-full bg-white py-16 sm:py-20 md:py-24">
+          <div className="mx-auto max-w-[1400px] px-6 sm:px-8 lg:px-12">
+            {/* Heading and Description */}
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-[1fr_2fr] md:items-start lg:gap-12">
+              <h2 className="text-xl font-semibold leading-tight text-[#1f2933] sm:text-2xl">
+                The Change We Are
+                <br />
+                Creating
+              </h2>
+
+              <p className="max-w-[850px] text-sm leading-relaxed text-[#3f4650] sm:text-base">
+                Our goal is to build a generation of digitally empowered children who
+                can confidently, responsibly, and safely participate in the online
+                world. We seek to increase awareness of online risks, strengthen
+                protective measures at home and in schools, and create safer digital
+                environments where children can learn, grow, and thrive.
+              </p>
+            </div>
+
+            {/* Goals Grid */}
+            <div className="mt-10 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="flex min-h-[140px] items-center bg-[#07862f] px-6 py-6">
+                <p className="text-sm leading-relaxed text-white">
+                  Improve digital literacy and online safety knowledge among children
+                  and young people
+                </p>
+              </div>
+
+              <div className="flex min-h-[140px] items-center bg-[#07862f] px-6 py-6">
+                <p className="text-sm leading-relaxed text-white">
+                  Strengthen the capacity of parents, caregivers, and educators to
+                  protect children online
+                </p>
+              </div>
+
+              <div className="flex min-h-[140px] items-center bg-[#07862f] px-6 py-6">
+                <p className="text-sm leading-relaxed text-white">
+                  Reduce children's exposure to cyberbullying, online exploitation,
+                  harmful content, and other digital risks
+                </p>
+              </div>
+
+              <div className="flex min-h-[140px] items-center bg-[#07862f] px-6 py-6">
+                <p className="text-sm leading-relaxed text-white">
+                  Promote responsible digital citizenship and positive online behavior
+                </p>
+              </div>
+
+              <div className="flex min-h-[140px] items-center bg-[#07862f] px-6 py-6">
+                <p className="text-sm leading-relaxed text-white">
+                  Improve digital literacy and online safety knowledge among children
+                  and young people
+                </p>
+              </div>
+
+              <div className="flex min-h-[140px] items-center bg-[#07862f] px-6 py-6">
+                <p className="text-sm leading-relaxed text-white">
+                  Advocate for policies and practices that prioritize children's rights
+                  and protection in the digital space
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         </main>
 
         <GetInvolved />
