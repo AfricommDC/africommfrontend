@@ -91,14 +91,14 @@ export default function ChildrenSafety() {
 
               <div className="relative grid grid-cols-1 lg:grid-cols-[1.05fr_1fr]">
                 
-                {/* Images */}
+               {/* Images */}
                 <div className="relative z-10 flex flex-col pt-8 lg:pt-12">
                   {/* Top Image */}
                   <div className="relative ml-0 w-[88%] lg:-ml-6">
                     <img
                       src={imageTop}
                       alt="Children's online safety programme"
-                      className="h-[230px] w-full object-cover sm:h-[280px] lg:h-[260px]"
+                      className="h-[320px] w-full object-cover sm:h-[380px] lg:h-[360px]"
                     />
                   </div>
 
@@ -107,7 +107,7 @@ export default function ChildrenSafety() {
                     <img
                       src={imageBottom}
                       alt="Community members participating in the programme"
-                      className="h-[230px] w-full object-cover sm:h-[280px] lg:h-[260px]"
+                      className="h-[320px] w-full object-cover sm:h-[380px] lg:h-[360px]"
                     />
                   </div>
                 </div>
