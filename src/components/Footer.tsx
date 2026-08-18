@@ -1,5 +1,5 @@
 import { FaFacebook } from "react-icons/fa";
-
+import logo from "../assets/Africomm/africomlogo.jpg";
 
 
 
@@ -28,7 +28,7 @@ export default function Footer() {
         {/* Brand block */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
           <img 
-            src="/src/assets/Africomm/africomlogo.jpg" 
+            src={logo}
             alt="Africomm Logo" 
             className="h-32 w-32 object-contain rounded-lg sm:h-36 sm:w-36"
           />
