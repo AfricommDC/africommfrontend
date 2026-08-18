@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import image1 from "@/assets/Africomm/image 2-2.png";
-import image2 from "@/assets/Africomm/image 3-1.png";
+import image2 from "@/assets/Africomm/image1.jpg";
 import GetInvolved from '@/components/GetInvolved';
 import Footer from "@/components/Footer";
 
@@ -91,6 +91,61 @@ export default function ClimateChange() {
             </div>
         </div>
        </section>
+
+       <section className="w-full bg-white px-4 py-8 sm:px-8 sm:py-12 md:px-12 md:py-16"  aria-labelledby="who-we-serve-heading" >
+            <div className="mx-auto max-w-6xl rounded-md bg-[#F26B1D] p-6 sm:p-8 md:p-10">
+                <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">
+                {/* Image */}
+                <div className="w-full flex-shrink-0 md:w-[38%]">
+                    <img
+                    src={image2}
+                    alt="Community members gathered for a Green Space Movement climate discussion"
+                    className="h-64 w-full rounded-sm object-cover sm:h-80 md:h-[420px]"
+                    />
+                </div>
+
+                {/* Content */}
+                <div className="w-full md:w-[62%]">
+                    {/* Who We Serve */}
+                    <h2
+                    id="who-we-serve-heading"
+                    className="text-base font-bold text-neutral-900 sm:text-lg"
+                    >
+                    Who We Serve
+                    </h2>
+                    <p className="mt-2 text-xs leading-relaxed text-neutral-900 sm:text-sm">
+                    We work with:
+                    </p>
+                    <ul className="mt-1 list-disc space-y-0.5 pl-5 text-xs leading-relaxed text-neutral-900 sm:text-sm">
+                    <li>Youth/youth groups, Women and community-based organizations</li>
+                    <li>Schools and learning institutions</li>
+                    <li>Smallholder farmers and rural households</li>
+                    <li>Community leaders and environmental champions</li>
+                    <li>Grassroots communities affected by climate-related challenges</li>
+                    </ul>
+
+                    {/* What the Programme Involves */}
+                    <h2 className="mt-5 text-base font-bold text-neutral-900 sm:mt-6 sm:text-lg">
+                    What the Programme Involves
+                    </h2>
+                    <p className="mt-2 text-xs leading-relaxed text-neutral-900 sm:text-sm">
+                    Through the Green Space Movement, we promote practical and
+                    sustainable climate solutions by:
+                    </p>
+                    <ul className="mt-1 list-disc space-y-0.5 pl-5 text-xs leading-relaxed text-neutral-900 sm:text-sm">
+                    <li>Supporting reforestation and afforestation initiatives</li>
+                    <li>Organizing community and school tree-growing campaigns</li>
+                    <li>Promoting climate-smart and organic farming practices at the household level</li>
+                    <li>Encouraging environmental conservation and ecosystem restoration</li>
+                    <li>Raising awareness on climate change adaptation and mitigation</li>
+                    <li>Supporting community-led environmental action initiatives</li>
+                    <li>Promoting sustainable waste management practices</li>
+                    <li>Encouraging youth leadership and participation in climate action</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
         
        
 
