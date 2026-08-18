@@ -149,7 +149,7 @@ export default function ClimateChange() {
         
        
 
-        <section  className="w-full bg-white px-6 py-8 sm:px-10 sm:py-10 md:px-14 md:py-12"  aria-labelledby="change-we-are-creating-heading">
+     <section  className="w-full bg-white px-6 py-8 sm:px-10 sm:py-10 md:px-14 md:py-12"  aria-labelledby="change-we-are-creating-heading">
             <div className="mx-auto max-w-6xl">
                 {/* Header */}
                 <div className="flex flex-col gap-3 md:flex-row md:items-start md:gap-10">
@@ -160,10 +160,10 @@ export default function ClimateChange() {
                     The Change We Are Creating
                 </h2>
                 <p className="text-sm leading-relaxed text-neutral-800 sm:text-base">
-                    Our goal is to build informed, empowered, and active citizens who can
-                    effectively participate in governance processes and demand
-                    transparency, accountability, and equitable service delivery.
-                    Through this programme, we aim to:
+                    Our goal is to build environmentally conscious, climate-resilient
+                    communities that can adapt to climate challenges while protecting
+                    natural resources for future generations. Through this programme,
+                    we aim to:
                 </p>
                 </div>
 
@@ -171,48 +171,47 @@ export default function ClimateChange() {
                 <div className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
                 <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
                     <p className="text-sm font-semibold leading-snug text-white sm:text-base">
-                    Increase meaningful public participation in decision-making
-                    processes
+                    Increase tree cover and restore degraded ecosystems
                     </p>
                 </div>
 
                 <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
                     <p className="text-sm font-semibold leading-snug text-white sm:text-base">
-                    Strengthen citizen oversight of public resources and development
-                    projects
+                    Improve household food security through sustainable farming
+                    practices
                     </p>
                 </div>
 
                 <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
                     <p className="text-sm font-semibold leading-snug text-white sm:text-base">
-                    Promote transparency and accountability among elected leaders and
-                    public institutions
+                    Strengthen community resilience to climate-related shocks
                     </p>
                 </div>
 
                 <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
                     <p className="text-sm font-semibold leading-snug text-white sm:text-base">
-                    Enhance public understanding of budgets, planning processes, and
-                    resource allocation
+                    Promote responsible waste management and environmental
+                    conservation
                     </p>
                 </div>
 
                 <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
                     <p className="text-sm font-semibold leading-snug text-white sm:text-base">
-                    Advance the protection and respect of human rights
+                    Enhance youth participation in climate action and environmental
+                    leadership
                     </p>
                 </div>
 
                 <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
                     <p className="text-sm font-semibold leading-snug text-white sm:text-base">
-                    Strengthen youth and women's leadership and civic engagement
+                    Reduce environmental degradation and support sustainable
+                    livelihoods
                     </p>
                 </div>
 
                 <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
                     <p className="text-sm font-semibold leading-snug text-white sm:text-base">
-                    Foster constructive dialogue and collaboration between communities
-                    and duty bearers
+                    Foster community ownership of climate solutions
                     </p>
                 </div>
                 </div>
