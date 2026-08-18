@@ -64,18 +64,12 @@ export default function Navbar() {
       {/* Main nav */}
       <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-8 py-4">
         {/* Logo */}
-        <Link to="#home" className="flex items-center gap-2.5 shrink-0">
-          <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
-            <circle cx="20" cy="20" r="18.5" stroke="#F2801E" strokeWidth="1.4" />
-            <path
-              d="M20 9c-2.6 2-6.5 3-6.5 8 0 3.6 2.4 6.3 6.5 8.7 4.1-2.4 6.5-5.1 6.5-8.7 0-5-3.9-6-6.5-8Z"
-              stroke="#F2801E"
-              strokeWidth="1.2"
-              fill="none"
-            />
-            <circle cx="16.5" cy="16" r="1.4" fill="#F2801E" />
-            <circle cx="23.5" cy="16" r="1.4" fill="#F2801E" />
-          </svg>
+        <Link to="/" className="flex items-center gap-2.5 shrink-0">
+          <img 
+            src="/src/assets/Africomm/africomlogo.jpg" 
+            alt="Africomm Logo" 
+            className="h-10 w-10 object-contain"
+          />
           <span className="font-[Manrope,sans-serif] text-[10px] font-bold uppercase leading-tight tracking-wide">
             <span className="text-[#F2801E]">African Community</span>
             <br />
