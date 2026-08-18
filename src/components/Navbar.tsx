@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
+import logo from "../assets/Africomm/africomlogo.jpg";
 import { Button } from "@/components/ui/button";
 
 type NavLink = {
@@ -66,7 +67,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 shrink-0">
           <img 
-            src="/src/assets/Africomm/africomlogo.jpg" 
+            src={logo} 
             alt="Africomm Logo" 
             className="h-10 w-10 object-contain"
           />
