@@ -102,7 +102,11 @@ export default function Footer() {
       <div className="mx-auto flex max-w-[1400px] flex-col gap-12 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
         {/* Brand block */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-          <EmblemMark className="h-28 w-28 sm:h-32 sm:w-32" />
+          <img 
+            src="/src/assets/Africomm/africomlogo.jpg" 
+            alt="Africomm Logo" 
+            className="h-32 w-32 object-contain rounded-lg sm:h-36 sm:w-36"
+          />
           <p className="mt-4 font-[Manrope,sans-serif] text-lg font-extrabold tracking-wide">
             AFRICOMM DEVELOPMENT CENTRE
           </p>
