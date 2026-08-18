@@ -134,6 +134,76 @@ export default function LeaderShip() {
                 </div>
             </div>
         </section>
+
+        <section  className="w-full bg-white px-6 py-8 sm:px-10 sm:py-10 md:px-14 md:py-12"  aria-labelledby="change-we-are-creating-heading">
+            <div className="mx-auto max-w-6xl">
+                {/* Header */}
+                <div className="flex flex-col gap-3 md:flex-row md:items-start md:gap-10">
+                <h2
+                    id="change-we-are-creating-heading"
+                    className="text-xl font-bold leading-snug text-neutral-900 sm:text-2xl md:w-[260px] md:flex-shrink-0"
+                >
+                    The Change We Are Creating
+                </h2>
+                <p className="text-sm leading-relaxed text-neutral-800 sm:text-base">
+                    Our goal is to build informed, empowered, and active citizens who can
+                    effectively participate in governance processes and demand
+                    transparency, accountability, and equitable service delivery.
+                    Through this programme, we aim to:
+                </p>
+                </div>
+
+                {/* Cards grid */}
+                <div className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+                <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
+                    <p className="text-sm font-semibold leading-snug text-white sm:text-base">
+                    Increase meaningful public participation in decision-making
+                    processes
+                    </p>
+                </div>
+
+                <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
+                    <p className="text-sm font-semibold leading-snug text-white sm:text-base">
+                    Strengthen citizen oversight of public resources and development
+                    projects
+                    </p>
+                </div>
+
+                <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
+                    <p className="text-sm font-semibold leading-snug text-white sm:text-base">
+                    Promote transparency and accountability among elected leaders and
+                    public institutions
+                    </p>
+                </div>
+
+                <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
+                    <p className="text-sm font-semibold leading-snug text-white sm:text-base">
+                    Enhance public understanding of budgets, planning processes, and
+                    resource allocation
+                    </p>
+                </div>
+
+                <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
+                    <p className="text-sm font-semibold leading-snug text-white sm:text-base">
+                    Advance the protection and respect of human rights
+                    </p>
+                </div>
+
+                <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
+                    <p className="text-sm font-semibold leading-snug text-white sm:text-base">
+                    Strengthen youth and women's leadership and civic engagement
+                    </p>
+                </div>
+
+                <div className="flex min-h-[120px] items-center bg-[#159641] p-5 sm:min-h-[130px] sm:p-6">
+                    <p className="text-sm font-semibold leading-snug text-white sm:text-base">
+                    Foster constructive dialogue and collaboration between communities
+                    and duty bearers
+                    </p>
+                </div>
+                </div>
+            </div>
+        </section>
         
         </main>
 
