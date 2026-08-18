@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import image1 from "@/assets/Africomm/image 2-2.png";
-import image2 from "@/assets/Africomm/image1.jpg";
+import image2 from "@/assets/Africomm/image2.jpg";
 import GetInvolved from '@/components/GetInvolved';
 import Footer from "@/components/Footer";
 
@@ -146,10 +146,48 @@ export default function ClimateChange() {
                 </div>
             </div>
         </section>
+
+        <section  className="w-full bg-white px-4 py-10 sm:px-8 sm:py-14 md:px-12 md:py-16"  aria-labelledby="myp-heading">
+            <div className="relative mx-auto max-w-6xl">
+                {/* Background image */}
+                <div className="overflow-hidden rounded-2xl">
+                <img
+                    src={image2}
+                    alt="Children walking together through a community environmental activity"
+                    className="h-64 w-full object-cover sm:h-80 md:h-[420px]"
+                />
+                </div>
+
+                {/* Overlapping green card */}
+                <div className="relative mx-auto -mt-10 w-[90%] bg-[#159641] p-5 sm:absolute sm:right-6 sm:top-6 sm:mt-0 sm:w-[300px] sm:p-6 md:right-10 md:top-8 md:w-[340px] md:p-7">
+                <h3
+                    id="myp-heading"
+                    className="sr-only"
+                >
+                    Meaningful Youth Participation
+                </h3>
+                <p className="text-xs leading-relaxed text-white sm:text-sm">
+                    Through our Meaningful Youth Participation (MYP) approach, we
+                    empower young people to become active agents of environmental
+                    change by championing the three Rs:
+                </p>
+                <ul className="mt-2 list-disc space-y-0.5 pl-5 text-xs leading-relaxed text-white sm:text-sm">
+                    <li>Reduce waste generation</li>
+                    <li>Reuse available resources</li>
+                    <li>Recycle materials wherever possible</li>
+                </ul>
+                <p className="mt-2 text-xs leading-relaxed text-white sm:text-sm">
+                    This approach promotes responsible consumption, environmental
+                    stewardship, and sustainable waste management practices within
+                    communities.
+                </p>
+                </div>
+            </div>
+        </section>
         
        
 
-     <section  className="w-full bg-white px-6 py-8 sm:px-10 sm:py-10 md:px-14 md:py-12"  aria-labelledby="change-we-are-creating-heading">
+        <section  className="w-full bg-white px-6 py-8 sm:px-10 sm:py-10 md:px-14 md:py-12"  aria-labelledby="change-we-are-creating-heading">
             <div className="mx-auto max-w-6xl">
                 {/* Header */}
                 <div className="flex flex-col gap-3 md:flex-row md:items-start md:gap-10">
