@@ -37,7 +37,45 @@ export default function Training() {
         </section>
 
 
-        
+        <section className="w-full bg-white px-6 py-10 sm:px-10 sm:py-14 md:px-14 md:py-16" aria-labelledby="partner-training-heading">
+            <div className="mx-auto max-w-6xl">
+                {/* Top: headline + paragraph (left) and green card (right) */}
+                <div className="flex flex-col gap-6 md:flex-row md:items-stretch md:gap-8">
+                <div className="md:w-3/5">
+                    <h2
+                    id="partner-training-heading"
+                    className="text-xl font-bold leading-snug text-neutral-900 sm:text-2xl md:text-[1.65rem] md:leading-[1.4]"
+                    >
+                    Partner with Africomm Development Centre to build skills,
+                    strengthen teams, and create lasting impact.
+                    </h2>
+
+                    <p className="mt-4 max-w-xl text-xs leading-relaxed text-black sm:mt-5 sm:text-sm">
+                    Africomm Development Centre provides high-quality training,
+                    coaching, and capacity-building services designed to strengthen
+                    individuals, institutions, and communities. Our training
+                    programmes are practical, interactive, and tailored to meet the
+                    unique needs of our clients while fostering personal growth,
+                    organizational excellence, and sustainable development.
+                    </p>
+                </div>
+
+                <div className="flex w-full flex-col justify-center bg-[#159641] p-6 sm:p-7 md:w-2/5 md:p-8">
+                    <h3 className="text-lg font-bold leading-snug text-white sm:text-xl">
+                    Who We Serve
+                    </h3>
+                    <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed text-white/90 sm:text-base">
+                    <li>Schools and educational institutions</li>
+                    <li>Corporate organizations and businesses</li>
+                    <li>Government and non-governmental institutions</li>
+                    <li>Community-Based Organizations (CBOs) and civil society organizations</li>
+                    <li>Youth groups and community groups</li>
+                    <li>Individuals seeking personal and professional growth</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
         
      
         
