@@ -217,7 +217,7 @@ export default function Consultancy() {
                 </p>
 
                 <p className="break-words text-xs leading-relaxed text-neutral-900 sm:text-sm">
-                Phone: +254 723 507 577 | +254 714 477 743
+                Phone: +254 723 507 577 
                 </p>
 
                 <p className="mt-4 text-xs leading-relaxed text-neutral-900 sm:text-sm">
