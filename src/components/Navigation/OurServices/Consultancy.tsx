@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import image1 from "@/assets/Africomm/image4.jpg";
+import impactImage from "@/assets/Africomm/image 4-1.png";
 import Footer from "@/components/Footer";
 
 
@@ -155,6 +156,78 @@ export default function Consultancy() {
                 </div>
             </div>
         </section>
+        
+       <section className="relative w-full overflow-hidden" aria-labelledby="why-choose-heading">
+        {/* Background image */}
+        <img
+            src={impactImage}
+            alt="Africomm consultant smiling during a client meeting"
+            className="absolute inset-0 h-full w-full object-cover"
+        />
+
+        {/* Lighter overlay for text contrast */}
+        <div className="absolute inset-0 bg-black/30" />
+
+        {/* Content */}
+        <div className="relative mx-auto flex min-h-[600px] max-w-6xl flex-col justify-between px-5 py-10 xs:min-h-[650px] sm:min-h-[700px] sm:px-10 sm:py-16 md:min-h-[600px] md:px-14 md:py-20">
+            <h2
+            id="why-choose-heading"
+            className="text-xl font-bold text-white xs:text-2xl sm:text-3xl md:text-4xl"
+            >
+            Why Choose Africomm?
+            </h2>
+
+            <div className="mt-8 flex flex-col gap-6 sm:mt-10 md:flex-row md:items-end md:justify-between md:gap-8">
+            {/* Left: supporting copy */}
+            <div className="max-w-xl space-y-3 sm:space-y-4 md:w-3/5">
+                <p className="text-xs leading-relaxed text-white sm:text-sm">
+                At Africomm, we combine professional expertise with practical
+                experience to deliver solutions that are tailored, sustainable,
+                and results-driven. We work closely with our clients to understand
+                their needs and provide actionable recommendations that lead to
+                measurable improvements in organizational performance and impact.
+                </p>
+
+                <p className="text-xs leading-relaxed text-white sm:text-sm">
+                In addition, every consultancy engagement contributes to our
+                community development mission, helping support programmes that
+                advance Sexual and Reproductive Health and Rights, Children's
+                Online Safety, Leadership and Governance, and Climate Change Action.
+                </p>
+            </div>
+
+            {/* Right: orange card */}
+            <div className="w-full bg-[#F26B1D] p-5 sm:w-[320px] sm:p-7 md:w-[300px] lg:w-[320px]">
+                <h3 className="text-base font-bold text-neutral-900 sm:text-lg md:text-xl">
+                How to Hire Us
+                </h3>
+
+                <p className="mt-3 text-xs leading-relaxed text-neutral-900 sm:text-sm">
+                Whether you require a one-time consultancy assignment, a long-term
+                organizational development partner, or customized staff training and
+                capacity-building support, our team is ready to work with you.
+                </p>
+
+                <p className="mt-4 text-xs font-bold leading-relaxed text-neutral-900 sm:text-sm">
+                Contact Us
+                </p>
+
+                <p className="text-xs leading-relaxed text-neutral-900 sm:text-sm">
+                Email: africommdc@gmail.com
+                </p>
+
+                <p className="break-words text-xs leading-relaxed text-neutral-900 sm:text-sm">
+                Phone: +254 723 507 577 | +254 714 477 743
+                </p>
+
+                <p className="mt-4 text-xs leading-relaxed text-neutral-900 sm:text-sm">
+                Office Location: Chuka Town, Abdenego House, Room 1, next to Chuka
+                Boys High School, along Kaanwa-Kajuki Road.
+                </p>
+            </div>
+            </div>
+        </div>
+       </section>
         
         </main>
 
