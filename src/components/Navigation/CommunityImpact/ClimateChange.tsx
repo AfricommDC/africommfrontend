@@ -145,7 +145,7 @@ export default function ClimateChange() {
                 </div>
                 </div>
             </div>
-        </section>
+       </section>
 
         <section  className="w-full bg-white px-4 py-10 sm:px-8 sm:py-14 md:px-12 md:py-16"  aria-labelledby="myp-heading">
             <div className="relative mx-auto max-w-6xl">
