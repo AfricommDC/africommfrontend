@@ -9,6 +9,8 @@ import SexualHealth from './components/Navigation/CommunityImpact/SexualHealth';
 import ChildrenSafety from './components/Navigation/CommunityImpact/ChildrenSafety';
 import LeaderShip from './components/Navigation/CommunityImpact/LeaderShip';
 import ClimateChange from './components/Navigation/CommunityImpact/ClimateChange';
+import Consultancy from './components/Navigation/OurServices/Consultancy';
+
 
 
 
@@ -28,6 +30,7 @@ function App() {
         <Route path="/childrens-online-safety" element={<ChildrenSafety />} />
         <Route path="/leadership-governance" element={<LeaderShip />} />
         <Route path="/climate-change-action" element={<ClimateChange />} />
+        <Route path="/consultancy" element={<Consultancy />} />
       </Routes>
     </>
   )
