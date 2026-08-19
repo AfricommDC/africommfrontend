@@ -82,6 +82,79 @@ export default function Consultancy() {
                 </div>
             </div>
         </section>
+
+        <section className="w-full bg-white px-6 py-10 sm:px-10 sm:py-14 md:px-14 md:py-16"  aria-labelledby="consultancy-services-heading">
+            <div className="mx-auto max-w-6xl">
+                <h2
+                id="consultancy-services-heading"
+                className="text-xl font-bold text-neutral-900 sm:text-2xl"
+                >
+                Our Consultancy Services
+                </h2>
+
+                <div className="mt-6 grid grid-cols-1 gap-5 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="bg-[#FBD9B8] p-6 sm:p-7">
+                    <h3 className="text-base font-bold leading-snug text-neutral-900 sm:text-lg">
+                    Strategic Planning
+                    </h3>
+                    <p className="mt-4 text-xs leading-relaxed text-neutral-800 sm:text-sm">
+                    We support organizations to develop clear, results-oriented
+                    strategic plans that align their vision, mission, goals, and
+                    operational priorities. Our approach ensures that organizations
+                    have a practical roadmap for growth, sustainability, and impact.
+                    </p>
+                </div>
+
+                <div className="bg-[#FBD9B8] p-6 sm:p-7">
+                    <h3 className="text-base font-bold leading-snug text-neutral-900 sm:text-lg">
+                    Human Resource Management
+                    </h3>
+                    <p className="mt-4 text-xs leading-relaxed text-neutral-800 sm:text-sm">
+                    We assist organizations in strengthening their human resource
+                    systems through policy development, performance management
+                    frameworks, staff engagement strategies, recruitment support,
+                    and workplace culture enhancement.
+                    </p>
+                </div>
+
+                <div className="bg-[#FBD9B8] p-6 sm:p-7">
+                    <h3 className="text-base font-bold leading-snug text-neutral-900 sm:text-lg">
+                    Facilities Management
+                    </h3>
+                    <p className="mt-4 text-xs leading-relaxed text-neutral-800 sm:text-sm">
+                    We provide advisory services on the effective management,
+                    utilization, and maintenance of organizational facilities to
+                    improve operational efficiency, safety, and service delivery.
+                    </p>
+                </div>
+
+                <div className="bg-[#FBD9B8] p-6 sm:p-7">
+                    <h3 className="text-base font-bold leading-snug text-neutral-900 sm:text-lg">
+                    Staff Capacity Building
+                    </h3>
+                    <p className="mt-4 text-xs leading-relaxed text-neutral-800 sm:text-sm">
+                    We design and deliver customized staff development programmes
+                    that strengthen leadership, communication, teamwork,
+                    productivity, customer relations, and professional competencies
+                    across all levels of an organization.
+                    </p>
+                </div>
+
+                <div className="bg-[#FBD9B8] p-6 sm:p-7">
+                    <h3 className="text-base font-bold leading-snug text-neutral-900 sm:text-lg">
+                    Customer Excellence Achieves Results (CESAR)
+                    </h3>
+                    <p className="mt-4 text-xs leading-relaxed text-neutral-800 sm:text-sm">
+                    Our CESAR programme equips organizations with practical
+                    strategies for delivering exceptional customer experiences. We
+                    help teams build customer-centered cultures, improve service
+                    delivery standards, strengthen client relationships, and enhance
+                    organizational reputation and performance.
+                    </p>
+                </div>
+                </div>
+            </div>
+        </section>
         
         </main>
 
