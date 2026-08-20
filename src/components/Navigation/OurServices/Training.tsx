@@ -77,8 +77,68 @@ export default function Training() {
             </div>
         </section>
         
-     
-        
+        <section  className="w-full bg-white px-6 py-10 sm:px-10 sm:py-14 md:px-14 md:py-16" aria-labelledby="training-areas-heading">
+            <div className="mx-auto max-w-6xl">
+                <h2
+                id="training-areas-heading"
+                className="text-xl font-bold text-neutral-900 sm:text-2xl"
+                >
+                Our Training Areas
+                </h2>
+
+                <div className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="flex min-h-[90px] items-center bg-[#FBD9B8] p-5 sm:min-h-[100px] sm:p-6">
+                    <p className="text-xs font-semibold leading-snug text-neutral-900 sm:text-sm">
+                    Life Skills Development
+                    </p>
+                </div>
+
+                <div className="flex min-h-[90px] items-center bg-[#FBD9B8] p-5 sm:min-h-[100px] sm:p-6">
+                    <p className="text-xs font-semibold leading-snug text-neutral-900 sm:text-sm">
+                    Personal Development and Leadership Coaching
+                    </p>
+                </div>
+
+                <div className="flex min-h-[90px] items-center bg-[#FBD9B8] p-5 sm:min-h-[100px] sm:p-6">
+                    <p className="text-xs font-semibold leading-snug text-neutral-900 sm:text-sm">
+                    Business Excellence and Entrepreneurship
+                    </p>
+                </div>
+
+                <div className="flex min-h-[90px] items-center bg-[#FBD9B8] p-5 sm:min-h-[100px] sm:p-6">
+                    <p className="text-xs font-semibold leading-snug text-neutral-900 sm:text-sm">
+                    Proposal Writing and Resource Mobilization
+                    </p>
+                </div>
+
+                <div className="flex min-h-[90px] items-center bg-[#FBD9B8] p-5 sm:min-h-[100px] sm:p-6">
+                    <p className="text-xs font-semibold leading-snug text-neutral-900 sm:text-sm">
+                    Team Building and Organizational Effectiveness
+                    </p>
+                </div>
+
+                <div className="flex min-h-[90px] items-center bg-[#FBD9B8] p-5 sm:min-h-[100px] sm:p-6">
+                    <p className="text-xs font-semibold leading-snug text-neutral-900 sm:text-sm">
+                    Career Development and Progression
+                    </p>
+                </div>
+
+                <div className="flex min-h-[90px] items-center bg-[#FBD9B8] p-5 sm:min-h-[100px] sm:p-6">
+                    <p className="text-xs font-semibold leading-snug text-neutral-900 sm:text-sm">
+                    Digital Skills and Professional Networking
+                    </p>
+                </div>
+
+                <div className="flex min-h-[90px] items-center bg-[#FBD9B8] p-5 sm:min-h-[100px] sm:p-6">
+                    <p className="text-xs font-semibold leading-snug text-neutral-900 sm:text-sm">
+                    Community-Based Organization (CBO) Development and Capacity
+                    Building
+                    </p>
+                </div>
+                </div>
+            </div>
+        </section>
+            
         </main>
 
         
